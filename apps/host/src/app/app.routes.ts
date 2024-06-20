@@ -7,6 +7,10 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('remote/Module').then((m) => m.RemoteEntryModule),
   },
   {
+    path: 'remote1',
+    loadChildren: () => import('mfe-1/Component').then((m) => m.Mfe2TestModule),
+  },
+  {
     path: '',
     component: NxWelcomeComponent,
   },
