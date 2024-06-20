@@ -14,7 +14,14 @@ const config: ModuleFederationConfig = {
    * declare module 'my-external-remote';
    *
    */
-  remotes: ['remote'],
+  remotes: ['remote', ['mfe-1', 'http://localhost:4202/remoteEntry.js']],
+  shared: () => {
+    return {
+      singleton: false,
+      strictVersion: false,
+      requiredVersion: 'auto',
+    };
+  },
 };
 
 export default config;
