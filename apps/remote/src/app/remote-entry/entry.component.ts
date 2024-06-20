@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NxWelcomeComponent } from './nx-welcome.component';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule, NxWelcomeComponent],
-  selector: 'app-remote-entry',
-  template: `<app-nx-welcome></app-nx-welcome>`,
+  selector: 'app-entry',
+  template: `
+    <div class="container">
+      <span>I'm the remote app :)</span>
+    </div>
+  `,
+  styles: [
+    `
+      .container {
+        border: 1px solid green;
+        padding: 24px;
+      }
+    `
+  ]
 })
 export class RemoteEntryComponent {}
